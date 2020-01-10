@@ -9,19 +9,17 @@
 
   <ion-list>
     <ion-item>
-      <ion-label position="floating">Tarih</ion-label>
+      <ion-label position="floating"></ion-label>
+      <ion-input [(ngModel)]="txtDoktorAdi" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Tarih(gg.aa.yyyy)</ion-label>
       <ion-input [(ngModel)]="txtDoktorTarih" type="text"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Saat (gg.aa.yyyy)</ion-label>
+      <ion-label position="floating">Saat </ion-label>
       <ion-input [(ngModel)]="txtDoktorSaat" type="text"></ion-input>
-    </ion-item>
-    
-    <ion-item>
-      <ion-thumbnail slot="end">
-        <ion-img [src]="base64Image"></ion-img>
-      </ion-thumbnail>
-    </ion-item>
+    </ion-item>    
   </ion-list>
-
+  <ion-button color="medium" (click)="randevuAl()" block>Randevu Al</ion-button>
 </ion-content>
