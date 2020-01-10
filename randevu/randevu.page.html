@@ -1,15 +1,27 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>
-        Randevu
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-     
-  </ion-content>
-  
+  <ion-toolbar>
+    <ion-title>Doktor Randevu Al</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button color="success" (click)="doktorSec()" block>Doktor Seç</ion-button>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Tarih</ion-label>
+      <ion-input [(ngModel)]="txtDoktorTarih" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Saat (gg.aa.yyyy)</ion-label>
+      <ion-input [(ngModel)]="txtDoktorSaat" type="text"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-thumbnail slot="end">
+        <ion-img [src]="base64Image"></ion-img>
+      </ion-thumbnail>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
