@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DatabaseProvider } from '../../database/database'
+import { DatabaseProvider } from '../database/database'
 import { SQLite } from '@ionic-native/sqlite/ngx';
 import { AlertController } from '@ionic/angular';
 import { SOURCE } from '@angular/core/src/di/injector';
@@ -22,19 +22,19 @@ export class RandevuPage implements OnInit {
   ngOnInit() {
   }
   doktorSec(){
-    this.txtDoktorAdi = "Doktor 1";
+    this.txtDoktorAdi="Doktor 1";
 
   }
 
    randevuAl() {
-    this.veritabani.Randevu(this.txtRandevuDoktorTarih,this.txtRandevuDoktorSaat,this.base64Image);
+    this.veritabani.Randevu(this.txtRandevuDoktorTarih,this.txtRandevuDoktorSaat);
     const alert = this.alert.create({
-      header: 'Alinan Randevular',
+      header: 'Randevular',
       subHeader: 'Başarılı',
       message: 'Randevu kaydedildi.',
       buttons: ['Kapat']
     }).then((alert)=> {alert.present()});
-  } 
+   }
   
   
-  }
+}
